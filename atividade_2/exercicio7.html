@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+
+    <script type="text/javascript">
+        texto = prompt("Escreva um texto: ", "Todos estes que aí estão. Atravancando o meu caminho, Eles passarão. Eu passarinho!");
+        letra = prompt("Escreva uma letra: ", "p").toLowerCase()
+
+        palavras = texto.split(" ")
+
+        guardar_palavras = []
+        for(i = 0; i <= palavras.length -1; i++) {
+            palavra_atual = palavras[i]
+            palavra_minuscula = palavra_atual.toLowerCase()
+
+            if((guardar_palavras.length == 0)& (palavra_minuscula[0] == letra)){
+                document.write(`Palavra iniciadas pela letra ${letra}`)
+                document.write("<br>")
+                document.write(`${palavra_atual}`)
+                guardar_palavras.push(palavra_atual)
+            }else if ((guardar_palavras.length != 0)& (palavra_minuscula[0] == letra)){
+                document.write(` ${palavra_atual}`)
+                guardar_palavras.push(palavra_atual)
+            }   
+        }
+        
+        console.log(guardar_palavras)
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

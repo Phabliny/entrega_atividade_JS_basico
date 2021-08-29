@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+
+    <script type="text/javascript">
+        nome = prompt("Qual o seu nome completo? ", "Phabliny Martins Silva Bomfim");
+
+        separando_nomes = nome.split(" ")
+        primeiro_nome = separando_nomes[0]
+        tamanho = primeiro_nome.length
+        sem_primeiro_nome = nome.substring(tamanho + 1, nome.length)
+        
+        alert(`${primeiro_nome.toLocaleUpperCase()}` + " " + `${sem_primeiro_nome.toLocaleLowerCase()}`)
+        
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

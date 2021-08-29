@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+
+    <script type="text/javascript">
+        texto = prompt("Escreva um texto: ", "amor carro bola bexiga caminhão aranha pastel");
+
+        palavras = texto.split(" ").sort()
+        console.log(palavras[0].charAt(0))
+
+        palavra_anterior = "";
+        for (var i = 0; i < palavras.length; i++){
+            console.log(palavra_anterior)
+            if(palavras[i].charAt(0) == palavra_anterior.charAt(0)){
+                document.write(`<ul><li>${palavras[i]}</li></ul>`)
+            } else {
+                document.write(`Palavras iniciadas com a letra ${palavras[i].charAt()}`)
+                document.write(`<ul><li>${palavras[i]}</li></ul>`)
+            }
+            palavra_anterior = palavras[i]
+        }
+
+        </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
