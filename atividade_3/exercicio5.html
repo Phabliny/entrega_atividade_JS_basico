@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <script>
+        n = prompt("Quantas pessoas vão partivipar do evento?", 3)
+
+        nomes = []
+        idades = [];
+        for(i = 0; i < n; i++) {
+            nome = prompt(`Digite o nome da ${i+1}° pessoa:`)
+            nomes.push(nome)
+            idade = parseInt(prompt(`Digite a idade da ${i+1}° pessoa:`))
+            idades.push(idade)
+        }
+
+        media = idades.reduce((soma, idade) => soma += idade, 0) / idades.length
+
+        escolher = Math.floor(Math.random() * nomes.length)
+
+        alert(`A média das idades é de ${media} anos. \nQuem ganhou o sorteio foi o(a) ${nomes[escolher]}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

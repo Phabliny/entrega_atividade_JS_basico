@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+
+    <style> 
+        h1 {
+            text-align: center;
+        }
+        
+        section {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: grey;
+            padding: 5px 20px;  
+        }
+            
+        hr {
+            border: 0.5px solid black;
+        }
+    </style>
+
+    <script>
+        num = prompt("Quantas pessoas vão apresentar? ", 5)
+
+        nomes = []
+        for (var i = 0; i < num; i++) {
+            nome = prompt(`Digite o ${i+1}° nome: `)
+            nomes.push(nome)
+        }
+
+        
+        document.write("<h1>Ordem de apresentação dos grupos</h1>")
+        document.write("<div>")
+        document.write("<section>")
+        escolhidos = 0;
+        while (escolhidos < num){
+            escolhidos +=1;
+            escolher = Math.floor(Math.random() * nomes.length)
+
+            document.write(`<p>${escolhidos}° - ${nomes[escolher]}</p>`);
+
+            if(escolhidos != num){
+                document.write("<hr>")
+            }
+            
+            index = nomes.indexOf(nomes[escolher]) 
+            remover = nomes.splice(index, 1);
+        }
+        document.write("</section>")
+        document.write("</div>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

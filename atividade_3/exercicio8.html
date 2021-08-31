@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+
+    <style> 
+        div {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img{
+            width: 15%;
+            border: 2px solid black;
+        }    
+
+        .resultado {
+                color: #ffbf00;
+        }
+
+
+        @media screen and (min-width: 1200px){ 
+            div {
+                width: 900px;
+                flex-direction: row;
+            }
+
+            .jogador {
+                padding: 0 10px 0 30px;
+            }
+
+            .resultado {
+                padding: 0 10px 0 30px;
+                width: 300px;
+                color: #ffbf00;
+            }
+
+        }
+
+    </style>
+
+    <script>
+        opcoes = new Array("img_jokenpo/pedra.png","img_jokenpo/papel.png","img_jokenpo/tesoura.png");
+
+        escolher1 = Math.floor(Math.random() * opcoes.length)
+        escolher2 = Math.floor(Math.random() * opcoes.length)
+
+        document.write("<div>")
+        document.write(`<h3 class="jogador">Jogador 1: </h3>`);
+        document.write(`<img src="${opcoes[escolher1]}">`)
+        document.write("<br>")
+        document.write(`<h3 class="jogador">Jogador 2: </h3>`);
+        document.write(`<img src="${opcoes[escolher2]}">`)
+        document.write("<br>")
+        
+
+        if(opcoes[escolher1] == opcoes[escolher2]) {
+            document.write(`<h3 class="resultado">Resultado: Empate!</h3>`)
+        } else if((opcoes[escolher1]=="img_jokenpo/pedra.png" && opcoes[escolher2]=="img_jokenpo/tesoura.png") || (opcoes[escolher1]=="img_jokenpo/papel.png" && opcoes[escolher2]=="img_jokenpo/pedra.png") || (opcoes[escolher1]=="img_jokenpo/tesoura.png" && opcoes[escolher2]=="img_jokenpo/papel.png")){
+            document.write(`<h3 class="resultado">Resultado: O jogador 1 ganhou!</h3>`)
+        } else{
+            document.write(`<h3 class="resultado">Resultado: O jogador 2 ganhou!</h3>`)
+        }
+        document.write("</div>")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

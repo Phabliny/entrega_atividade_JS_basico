@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+        
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        section {
+            width: 800px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .jogador {
+            width: 200px;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+    </style>
+
+    <script>
+        cartas = new Array("cartas/carta1.png","cartas/carta2.png","cartas/carta3.png", "cartas/carta4.png", "cartas/carta5.png", "cartas/carta6.png", "cartas/carta7.png", "cartas/carta8.png", "cartas/carta9.png", "cartas/carta10.png", "cartas/carta11.png","cartas/carta12.png","cartas/carta13.png", "cartas/carta14.png", "cartas/carta15.png", "cartas/carta16.png", "cartas/carta17.png", "cartas/carta18.png", "cartas/carta19.png", "cartas/carta20.png","cartas/carta21.png","cartas/carta22.png","cartas/carta23.png", "cartas/carta24.png", "cartas/carta25.png", "cartas/carta26.png", "cartas/carta27.png");
+
+        cartas_escolhidas = []
+
+        document.write("<h2>JOGUE TRUCO</h2>")
+        document.write("<h3>Cartas sorteadas</h3>")
+
+        while (cartas_escolhidas.length <=12) {
+            escolher = Math.floor(Math.random() * cartas.length)
+            cartas_escolhidas.push(cartas[escolher])
+            index = cartas.indexOf(cartas[escolher]) 
+            cartas.splice(index, 1);
+        }
+
+        document.write("<section>")
+        document.write(`<h2 class="jogador">Jogador 1: </h2>`);
+        document.write(`<img src="${cartas_escolhidas[0]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[1]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[2]}">`)
+        document.write("<br>")
+        document.write("</section>")
+
+        document.write("<section>")
+        document.write(`<h2 class="jogador">Jogador 2: </h2>`);
+        document.write(`<img src="${cartas_escolhidas[3]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[4]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[5]}">`)
+        document.write("<br>")
+        document.write("</section>")
+
+        document.write("<section>")
+        document.write(`<h2 class="jogador">Jogador 3: </h2>`);
+        document.write(`<img src="${cartas_escolhidas[6]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[7]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[8]}">`)
+        document.write("<br>")
+        document.write("</section>")
+
+        document.write("<section>")
+        document.write(`<h2 class="jogador">Jogador 4: </h2>`);
+        document.write(`<img src="${cartas_escolhidas[9]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[10]}">`)
+        document.write("<br>")
+        document.write(`<img src="${cartas_escolhidas[11]}">`)
+        document.write("<br>")
+        document.write("</section>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

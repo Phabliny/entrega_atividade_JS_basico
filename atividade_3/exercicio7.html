@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        img{
+            width: 200px;
+        }    
+    </style>
+
+    <script>
+        imagem_dado = new Array("img_dado/lado1.jpg","img_dado/lado2.jpg","img_dado/lado3.jpg", "img_dado/lado4.jpg", "img_dado/lado5.jpg", "img_dado/lado6.jpg");
+
+        escolher = Math.floor(Math.random() * imagem_dado.length)
+        document.write(`<img src="${imagem_dado[escolher]}">`);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
