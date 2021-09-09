@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,11 +40,11 @@
         
         disciplina = ["Projeto Sistema Web MVC e SQL", "Algoritmos e Programação", "Programação Orientada a Objetos 1", "Fundamentos de Banco de Dados", "JavaScript Básico"]
 
-        document.write(`<table><tr><td class="coluna1 alinhar_centro"><span style='font-weight: bold;'>Código</span></td><td class="alinhar_centro"><span style='font-weight: bold;'>Disciplina</span</td></tr>`)
+        document.write(`<table><tr><th class="coluna1 alinhar_centro"><span style='font-weight: bold;'>Código</span></th><th class="alinhar_centro"><span style='font-weight: bold;'>Disciplina</span</th></tr>`)
         
-            for(var i = 0; i<=codigo.length-1; i++) {
+        for(var i = 0; i<=codigo.length-1; i++) 
             document.write(`<tr><td class="coluna1 adicionar_padding">${codigo[i]}</td><td class="adicionar_padding">${disciplina[i]}</td></tr>`)
-        }
+        
         document.write(`</table>`)     
 
     </script>
