@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            text-align: left;
+            width: 300px;
+        }
+
+        .coluna1 {
+            width: 70px;
+        }
+
+        .alinhar_centro {
+            text-align: center;
+        }
+
+        .adicionar_padding {
+            padding-left: 7px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        codigo = ["P2", "AP", "POO1", "FBD", "JSB"]
+        
+        disciplina = ["Projeto Sistema Web MVC e SQL", "Algoritmos e Programação", "Programação Orientada a Objetos 1", "Fundamentos de Banco de Dados", "JavaScript Básico"]
+
+        document.write(`<table><tr><td class="coluna1 alinhar_centro"><span style='font-weight: bold;'>Código</span></td><td class="alinhar_centro"><span style='font-weight: bold;'>Disciplina</span</td></tr>`)
+        
+            for(var i = 0; i<=codigo.length-1; i++) {
+            document.write(`<tr><td class="coluna1 adicionar_padding">${codigo[i]}</td><td class="adicionar_padding">${disciplina[i]}</td></tr>`)
+        }
+        document.write(`</table>`)     
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
