@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+
+    <style>
+        h4 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .sinais{
+            width:34px;
+            height:25px;
+            font-size:15px;
+        }
+
+        .botao {
+            padding-left: 15px;
+        }
+
+        .input {
+            width: 120px;
+        }
+
+        .resultado {
+            width:110px;
+        }
+    </style>
+
+    <script>
+        function mostrarSoma() {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            resultado = parseFloat(valor1) + parseFloat(valor2);
+            if(valor1 == "" || valor2 == "")
+                alert("Digite um valor em cada caixa para utílizar a calculadora!");
+            else
+                document.getElementById("resultado").value = resultado;
+        }
+
+        function mostrarSubtracao() {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            resultado = parseFloat(valor1) - parseFloat(valor2);
+            if(valor1 == "" || valor2 == "")
+                alert("Digite um valor em cada caixa para utílizar a calculadora!");
+            else
+                document.getElementById("resultado").value = resultado;
+        }
+
+        function mostrarMultiplicacao() {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            resultado = parseFloat(valor1) * parseFloat(valor2);
+            if(valor1 == "" || valor2 == "")
+                alert("Digite um valor em cada caixa para utílizar a calculadora!");
+            else
+                document.getElementById("resultado").value = resultado;
+        }
+
+        function mostrarDivisao() {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            resultado = parseFloat(valor1) / parseFloat(valor2);
+
+            if(valor1 == "" || valor2 == "")
+                alert("Digite um valor em cada caixa para utílizar a calculadora!");
+            else
+                if (valor2 == 0) 
+                    alert("Impossível dividir por zero, tente novamente com outro valor!");
+                else 
+                    document.getElementById("resultado").value = resultado;
+        }
+    </script>
+
+</head>
+<body>
+    <h4>Calculadora</h4>
+    <form>
+        <table>
+            <tr>
+                <td><label for="valor1">1° Valor:</label></td>
+                <td><input type="number" id="valor1" class="input"></td>
+            </tr>
+
+            <tr>
+                <td><label for="valor2">2° Valor:</label></td>
+                <td ><input type="number" id="valor2" class="input"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input type="button" value="+" onclick="mostrarSoma()" class="sinais"></td>
+                <td class="botao"><input type="button" value="-" onclick="mostrarSubtracao()" class="sinais"></td>
+                <td class="botao"><input type="button" value="*" onclick="mostrarMultiplicacao()" class="sinais"></td>
+                <td class="botao"><input type="button" value="/" onclick="mostrarDivisao()" class="sinais"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><label for="resultado">Resultado:</label></td>
+                <td><input type="number" id="resultado" class="resultado"></td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
