@@ -1,0 +1,46 @@
+div {
+    width: 360px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+h1 {
+    color:blue;
+    font-size: 24px;
+    font-family: verdana;
+}
+
+form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alinhar_direita {
+    text-align: right;
+    width: 115px;
+}
+
+#login {
+    width: 205px;
+}
+
+#senha {
+    width: 100px;
+}
+
+#confirmar_senha {
+    width: 100px;;
+}
+.input_menor {
+    width:100px;
+}
+
+.cor_vermelho {
+    color: red;
+    font-size: 10px;
+    font-family: verdana;
+}

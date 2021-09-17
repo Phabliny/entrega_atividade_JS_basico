@@ -5,78 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 5</title>
-
-    <style>
-        div {
-            width: 360px;
-            height: 200px;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid black;
-            text-align: center;
-        }
-
-        h1 {
-            color:blue;
-            font-size: 24px;
-            font-family: verdana;
-        }
-
-        form {
-            width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .alinhar_direita {
-            text-align: right;
-            width: 115px;
-        }
-
-        #login {
-            width: 205px;
-        }
-
-        #senha {
-            width: 100px;
-        }
-
-        #confirmar_senha {
-            width: 100px;;
-        }
-        .input_menor {
-            width:100px;
-        }
-
-        .cor_vermelho {
-            color: red;
-            font-size: 10px;
-            font-family: verdana;
-        }
-
-    </style>
-
-    <script>
-        function entarSistema() {
-            login = document.getElementById("login").value;
-            senha = document.getElementById("senha").value;
-            confirmar_senha = document.getElementById("confirmar_senha").value;
-
-            if(login != "")
-                if(senha == confirmar_senha && senha != "")
-                    alert("Login realizado com sucesso!")
-                else
-                    alert("Senha inválida!")
-            else
-                alert("Favor informar o Login")
-        }
-
-        function limparDados() {
-            login = document.getElementById("login").value="";
-            senha = document.getElementById("senha").value="";
-            confirmar_senha = document.getElementById("confirmar_senha").value="";
-        }
-    </script>
+    <link rel="stylesheet" href="/css/style_5.css">
 
 </head>
 <body>
@@ -106,6 +35,6 @@
             <input type="button" value="Limpar" onclick="limparDados()">
         </form>
     </div>
-    
+    <script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
