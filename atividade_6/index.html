@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Avaliativa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <h3>Formulário</h3>
+        <label for="txtNome">Nome:</label>
+        <input type="text" id="txtNome" name="NOME">
+
+        <br><br>
+        <label for="txtEndereco">Endereço:</label>
+        <input type="text" id="txtEndereco" name="ENDEREÇO">
+
+        <br><br>
+        <label for="txtFone">Telefone:</label>
+        <input type="text" id="txtFone" name="TELEFONE">
+
+        <br><br>
+        <label for="txtPais">País:</label>
+        <input type="text" id="txtPais" name="PAÍS">
+
+        <br><br>
+        <label for="estado" >Estado:</label>
+        <select id="estado" name="ESTADO"> 
+            <option value="selecione">Selecione</option> 
+            <option value="ac">Acre</option> 
+            <option value="al">Alagoas</option> 
+            <option value="am">Amazonas</option> 
+            <option value="ap">Amapá</option> 
+            <option value="ba">Bahia</option> 
+            <option value="ce">Ceará</option> 
+            <option value="df">Distrito Federal</option> 
+            <option value="es">Espírito Santo</option> 
+            <option value="go">Goiás</option> 
+            <option value="ma">Maranhão</option> 
+            <option value="mt">Mato Grosso</option> 
+            <option value="ms">Mato Grosso do Sul</option> 
+            <option value="mg">Minas Gerais</option> 
+            <option value="pa">Pará</option> 
+            <option value="pb">Paraíba</option> 
+            <option value="pr">Paraná</option> 
+            <option value="pe">Pernambuco</option> 
+            <option value="pi">Piauí</option> 
+            <option value="rj">Rio de Janeiro</option> 
+            <option value="rn">Rio Grande do Norte</option> 
+            <option value="ro">Rondônia</option> 
+            <option value="rs">Rio Grande do Sul</option> 
+            <option value="rr">Roraima</option> 
+            <option value="sc">Santa Catarina</option> 
+            <option value="se">Sergipe</option> 
+            <option value="sp">São Paulo</option> 
+            <option value="to">Tocantins</option> 
+        </select>
+
+        <br><br>
+        <label for="txtCidade">Cidade:</label>
+        <input type="text" id="txtCidade" name="CIDADE">
+        
+        <br><br>
+        <label for="SEXO">Sexo:</label>
+        <input type="radio" name="SEXO" id="SEXOM"><label for="SEXOM"><span style="color:rgb(85, 84, 84)">Masculino</span></label>
+        <input type="radio" name="SEXO" id="SEXOF"><label for="SEXOF"><span style="color:rgb(85, 84, 84)">Feminino</span></label>
+
+        <br><br>
+        <label for="estCivil">Estado Civil:</label>
+        <select id="estCivil" name="ESTADO CIVIL">
+            <option value="selecione">Selecione</option>
+            <option value="casado">Casado</option>
+            <option value="solteiro">Solteiro</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viuvo">Viúvo</option>
+        </select>
+        <br><br>
+        <label for="textSugestoes">Sugestões:</label>
+        <br>
+        <textarea id="txtSugestoes" name="SUGESTÕES"
+            rows="5" cols="30"></textarea>
+
+        <br><br>
+        <input type="button" value="Cadastrar" onclick="verificar()">
+        <input type="reset" value="Limpar">
+        <br>
+    </form>
+
+     <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
