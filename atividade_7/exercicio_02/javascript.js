@@ -1,71 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página </title>
-    <style>
-        *{
-            padding: 15px 0 0 0;
-            margin: 0;
-        }
-
-        .container{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nomeCandidatos{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nomeCandidatos div {
-            width: 250px;
-            margin-left: 10px;
-        }
-
-        .container div {
-            width: 250px;
-            height: 400px;
-            border: 3px solid black;
-            margin-left: 10px;
-            background-color: #C3D99E;
-        }
-
-        img { 
-            padding: 15px 33.5px;
-            width: 183px;
-            height: 275px;
-        }
-
-        h2 {
-            text-align: center;
-            color: red;
-        }
-
-        h3 {
-            padding-top: 15px;
-            text-align: center;
-        }
-    </style>
-
-    <script>
-        clicks1 = 1
+clicks1 = 1
         clicks2 = 1
         clicks3 = 1
         clicks4 = 1
 
         meuStorage = localStorage
         function votar(id) {
-            cpf = prompt("Digite o número do seu CPF: (nesse caso digite apenas 3 digítos)")
+            cpf = prompt("Digite o número do seu CPF: (nesse caso digite apenas 4 digítos)")
             
-            if(cpf.length == 3){
+            if(cpf.length == 4){
                 if(localStorage.getItem(`${cpf}`) === null){
                     localStorage.setItem(`${cpf}`,true)
                     if(id == "cand1"){
@@ -162,48 +104,10 @@
                 document.getElementById('candidato2').style.backgroundColor = "green"
                 document.getElementById('candidato3').style.backgroundColor = "green"
                 document.getElementById('candidato4').style.backgroundColor = "green"
-            }else if ((clicks2 == clicks3) && (clicks2 == clicks4) && (clicks2 == clicks1)) {
+            }else if ((clicks2 == clicks3) && (clicks2 == clicks4) && (clicks2 == clicks1) && (clicks2 != 0)) {
                 document.getElementById('candidato1').style.backgroundColor = "green"
                 document.getElementById('candidato2').style.backgroundColor = "green"
                 document.getElementById('candidato3').style.backgroundColor = "green"
                 document.getElementById('candidato4').style.backgroundColor = "green"
             }
         } 
-        
-
-    </script>
-</head>
-<body>
-    <div class="nomeCandidatos">
-        <div><h2>CANDIDATO 1</h2></div>
-        <div><h2>CANDIDATO 2</h2></div>
-        <div><h2>CANDIDATO 3</h2></div>
-        <div><h2>CANDIDATO 4</h2></div>
-   
-    </div>
-    <div class="container">
-        <div id="candidato1">
-            <h3>Mickey</h3>
-            <img src="img/candidato1.jpg" id="cand1" alt="Imagem do candidato 1" onclick="votar('cand1')"> 
-            <h3 id="numVotos1">Número de votos : <span style="color:red; font-size: 25px">0</span></h3>
-        </div>
-        <div id="candidato2">
-            <h3>Minnie</h3>
-            <img src="img/candidato2.jpg" id="cand2" alt="Imagem do candidato 2" onclick="votar('cand2')"> 
-            <h3 id="numVotos2">Número de votos : <span style="color:red; font-size: 25px">0</span></h3>
-        </div>
-        <div id="candidato3">
-            <h3>Pluto</h3>
-            <img src="img/candidato4.jpg" id="cand3" alt="Imagem do candidato 3" onclick="votar('cand3')"> 
-            <h3 id="numVotos3">Número de votos : <span style="color:red; font-size: 25px">0</span></h3>
-        </div>
-        <div id="candidato4">
-            <h3>Pateta</h3>
-            <img src="img/candidato3.jpg" id="cand4" alt="Imagem do candidato 4" onclick="votar('cand4')"> 
-            <h3 id="numVotos4">Número de votos : <span style="color:red; font-size: 25px">0</span></h3>
-        </div>
-        
-    </div>
-    
-</body>
-</html>
