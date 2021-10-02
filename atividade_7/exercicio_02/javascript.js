@@ -34,7 +34,12 @@ clicks1 = 1
             }
             
 
-            if ((clicks1 > clicks2) && (clicks1 > clicks3) && (clicks1 > clicks4)) {
+            if((clicks2 == clicks3) && (clicks2 == clicks4) && (clicks2 == clicks1) && (clicks2 == 0)) {
+                document.getElementById('candidato1').style.backgroundColor = "#C3D99E"
+                document.getElementById('candidato2').style.backgroundColor = "#C3D99E"
+                document.getElementById('candidato3').style.backgroundColor = "#C3D99E"
+                document.getElementById('candidato4').style.backgroundColor = "#C3D99E"
+            } else if ((clicks1 > clicks2) && (clicks1 > clicks3) && (clicks1 > clicks4)) {
                 document.getElementById('candidato1').style.backgroundColor = "green"
                 document.getElementById('candidato2').style.backgroundColor = "#C3D99E"
                 document.getElementById('candidato3').style.backgroundColor = "#C3D99E"
