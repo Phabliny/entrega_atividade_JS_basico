@@ -82,7 +82,7 @@
             if ((email == "") || (senha == ""))
                 alert("Favor preencher todos os campos!");
             else if (senha.length < 5)
-                alert("Senha muito pequena!");
+                alert("A senha deve conter 5 ou mais digitos!");
             else {
                 if (usuarios.indexOf(email) > -1) {
                     alert("O usuário já existe!")
