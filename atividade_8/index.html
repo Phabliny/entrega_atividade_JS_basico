@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url("fundo.jpg");
+            background-size: 100%;
+        }
+        div {
+            width: 250px;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid black;
+            border-radius: 15px;
+            background-color: #bee2e7;
+            padding: 20px 20px 40px 20px;
+            text-align: center;
+            margin-top: 22vh;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"] {
+            width:200px;
+            border:none;
+            border-bottom:2px solid blue;
+            outline:none;
+            padding-top: 10px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        input[type="password"] {
+            width:200px;
+            border:none;
+            border-bottom:2px solid blue;
+            outline:none;
+            padding-top: 10px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        input[type="button"] {
+            background-color: blue;
+            color:white;
+            border:none;
+            outline: none;
+            display: inline-block;
+            padding:10px;
+            width:80px;
+            margin:auto;    
+            margin-top: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #botao1 {
+            margin-right: 10px;
+        }
+
+    </style>
+        
+    <script>
+        var usuarios = [];
+        var senhas = [];
+
+        function logar() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            usuarios = localStorage.getItem("usuarios").split(",");
+            senhas = localStorage.getItem("senhas").split(",");
+
+
+            for (var i = 0; i < usuarios.length; i++) {
+                if (email == "" || senha == "") {
+                    alert("Favor preencher todos os campos!")
+                    break
+                } else if (usuarios[i] != email || senhas[i] != senha) {
+                    if (usuarios[i] == email) {
+                        alert("Senha inválida!")
+                        break
+                    }
+                    else {
+                        alert("Usuário não encontrado!")
+                        break
+                    }
+                } else if(usuarios[i] == email || senhas[i] == senha) {
+                    alert("Login realizado com sucesso!")
+                    window.open("pag01.html", "_self")
+                    break
+                }
+            }
+        }
+
+        function irCadastro() {
+            window.open('cadastro.html', '_self')
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Login <span style="color: blue">Tamagotchi</span></h2>
+        <form>
+            <label for="email">Email cadastrado:</label>
+            <br>
+            <input type="email" id="email" placeholder="exemplo@gmail.com">
+            <br>
+            <br>
+            <label for="senha">Senha:</label>
+            <br>
+            <input type="password" id="senha" placeholder="Digite a senha">
+            <br>
+            <br>
+            <input type="button" id="botao1" value="Login" onclick="logar()">
+            <input type="button" value="Cadastrar" onclick="irCadastro()">
+        </form>
+    </div>
+    
+    
+</body>
+</html>

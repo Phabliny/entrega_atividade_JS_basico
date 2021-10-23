@@ -1,4 +1,4 @@
-clicks1 = 1
+        clicks1 = 1
         clicks2 = 1
         clicks3 = 1
         clicks4 = 1

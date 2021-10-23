@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            background-image: url("fundo.jpg");
+            background-size: 100%;
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid black;
+            border-radius: 15px;
+            background-color: #bee2e7;
+            padding: 20px 20px 40px 20px;
+            text-align: center;
+            margin-top: 22vh;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"] {
+            width:200px;
+            border:none;
+            border-bottom:2px solid blue;
+            outline:none;
+            padding-top: 10px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        input[type="password"] {
+            width:200px;
+            border:none;
+            border-bottom:2px solid blue;
+            outline:none;
+            padding-top: 10px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        input[type="button"] {
+            background-color: blue;
+            color:white;
+            border:none;
+            outline: none;
+            display: inline-block;
+            padding:10px;
+            width:80px;
+            margin:auto;    
+            margin-top: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #botao1 {
+            margin-left: 10px;
+        }
+    </style>
+    
+    <script>
+        usuarios = [];
+        senhas = [];
+        function fazerCadastro() {
+            email = document.getElementById("email").value;
+            senha = document.getElementById("senha").value;
+
+            if ((email == "") || (senha == ""))
+                alert("Favor preencher todos os campos!");
+            else if (senha.length < 5)
+                alert("Senha muito pequena!");
+            else {
+                if (usuarios.indexOf(email) > -1) {
+                    alert("O usuário já existe!")
+                }
+                else {
+                    alert("Cadastro realizado com sucesso!");
+                    usuarios.push(email);
+                    senhas.push(senha);
+                    localStorage.setItem("usuarios", usuarios);
+                    localStorage.setItem("senhas", senhas);
+                }
+            }
+        }
+
+        function retornarLogin() {
+            window.open('index.html', '_self')
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Cadastro <span style="color: blue">Tamagotchi</span></h2>
+        <form>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" placeholder="exemplo@gmail.com">
+            <br>
+            <br>
+            <label for="senha">Senha:</label>
+            <br>
+            <input type="password" id="senha" placeholder="Digite a senha">
+            <br><br>
+    
+            <input type="button" value="Cadastrar" onclick="fazerCadastro()">
+            <input type="button" id ="botao1" value="Retornar" onclick="retornarLogin()">
+        </form>
+    </div>
+    
+</body>
+</html>
