@@ -1,0 +1,20 @@
+.container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagem {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#contagem {
+    color: red;
+    padding: 0px;
+    margin: 0px;
+}
