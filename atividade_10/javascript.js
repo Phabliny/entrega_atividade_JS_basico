@@ -27,7 +27,7 @@ function changeCar() {
         contador++
     } else if (contador == 2){
         elementos(0)
-        contador = 0;
+        contador = 0
     }
 }
 
