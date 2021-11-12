@@ -1,0 +1,35 @@
+.container {    
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+}
+
+.imagem_div {
+    width: 420px;
+    height: 320px;
+}
+
+#imagem {
+    width: 420px;
+    height: 320px;
+}
+
+.caracteristicas {
+    margin-left: 30px;
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: green;
+}
