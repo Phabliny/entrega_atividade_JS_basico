@@ -5,7 +5,7 @@ garantia = ["3 anos", "3 anos", "5 anos"]
 consumo = ["não foi informado", "9,2km/l", "8,5km/l"]
 
 function play() {
-    temporizador = setInterval("changeCar()", 1000);
+    temporizador = setInterval("changeCar()", 1000)
 }
 
 function elementos(posicao){
@@ -16,7 +16,7 @@ function elementos(posicao){
     document.getElementById("consumo").innerHTML = `${consumo[posicao]}`
 }
 
-contador = 0;
+contador = 0
 function changeCar() {
 
     if  (contador == 0){
