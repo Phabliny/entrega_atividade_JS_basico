@@ -11,7 +11,6 @@ function cadastrar() {
     if(tabUsuarios == null) tabUsuarios = {usuarios:[]}
 
     padraoNome = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
-    console.log(nota1user)
 
     if(!padraoNome.test(nomeUser)) alert("Nome inválido!!!")
     else if((ra_user<100) || (ra_user>999)) alert("Número de matrícula inválido!!! (Digite apenas 3 números)")
