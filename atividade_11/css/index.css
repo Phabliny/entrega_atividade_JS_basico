@@ -1,0 +1,68 @@
+.container {
+    width: 390px;
+    height: 330px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #45c7f315;
+}
+
+h1 {
+    text-align: center;
+    color: #1c6a85;
+}
+
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #008CBA;
+    width: 100px;
+    background-color: transparent;
+}
+
+#nome {
+    width: 175px;
+    background-color: transparent;
+}
+
+#ra {
+    width: 136px;
+    background-color: transparent;
+}
+
+#nota2 {
+    width: 103px;
+    background-color: transparent;
+}
+
+.botao {
+    border: 1px solid black;
+    text-align: center;
+    margin-left:140px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #e7e7e7;
+    color: #008CBA;
+    height: 30px;
+    font-weight: bold;
+}
+
+.botao:hover{
+    background-color: #008CBA; /* Green */
+    color: aliceblue;
+    cursor: pointer;
+}
+
+label{
+    margin-left: 45px;
+}
+
+a {
+    margin-left:110px;
+}

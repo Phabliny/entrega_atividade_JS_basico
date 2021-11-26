@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro Estudante</h1>
+        <form>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" required>
+            <br><br>
+
+            <label for="ra">R.A (N° de matrícula):</label>
+            <input type="number" id="ra" required>
+            <br><br>
+
+            <label for="nota1">Nota do primeiro bimestre:</label>
+            <input type="number" id="nota1" min="0" max="50" required>
+            <br><br>
+
+            <label for="nota2">Nota do segundo bimestre:</label>
+            <input type="number" id="nota2" min="0" max="50" required>
+            <br><br>
+
+            <input type="button" value="Cadastrar" onclick="cadastrar()" class="botao">
+            <br>
+        </form>
+        <a href="listar.html">Ver usuários cadastrado</a>
+
+        <script type="text/javascript" src="./js/javascript.js"></script>
+    </div>
+        
+</body>
+</html>
