@@ -1,0 +1,49 @@
+.container {
+    width: 580px;
+    height: 600px;
+    border: 5px solid #1a3d3b;
+    border-radius: 50px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(173,216,230, 0.2);
+}
+
+form label {
+    margin-left: 20px;
+}
+
+input {
+    border-radius: 7px;
+}
+
+#campus, #senha {
+    width: 210px;
+}
+
+h2 {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1a3d3b;
+}
+
+.botao {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: #e7e7e7;
+    color: #008CBA;
+    height: 21px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.botao:hover{
+    background-color: #008CBA; /* Green */
+    color: aliceblue;
+    cursor: pointer;
+}

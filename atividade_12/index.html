@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jwifi.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>EXPRESSÕES REGULARES</h2>
+        <form>
+            <!--Letra a-->
+            <!-- xx/xx/xxxx -->
+            <label for="data">Data de nascimento:</label>
+            <input type="text" id="data" value="08/12/1995">
+            <input type="button" value="Validar" onclick="validarData()" class="botao">
+    
+            <br><br>
+            <!--Letra b-->
+            <!-- xxx.xxx.xxx-xx -->
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" value="111.222.333-12" onkeypress="inserirMascara('cpf','999.999.999-99')">
+            <input type="button" value="Validar" onclick="validarCPF()" class="botao">
+    
+            <br><br>
+            <!--Letra c-->
+            <!-- IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy -->
+            <label for="numMatr">Número de matrícula:</label>
+            <input type="text" id="numMatr" value="iftm-111/222-a2">
+            <input type="button" value="Validar" onclick="validarNumMatr()" class="botao">
+    
+            <br><br>
+            <!--Letra d-->
+            <!-- MT-xx.xxx-IFTM -->
+            <label for="codigoDisc">Código de uma disciplina do IFTM:</label>
+            <input type="text" id="codigoDisc" value="mt-11.222-IFTM"
+                onkeypress="inserirMascara('codogoDisc','99-99.999-9999')">
+            <input type="button" value="Validar" onclick="validarCodigoDisc()" class="botao">
+    
+            <br><br>
+            <!--Letra e-->
+            <!-- MT-xx.xxx-IFTM -->
+            <label for="codigoDisc2">Código de uma disciplina do IFTM (versão 2):</label>
+            <input type="text" id="codigoDisc2" value="MT-11.222-iftm"
+                onkeypress="inserirMascara('codigoDisc2','99-99.999-9999')">
+            <input type="button" value="Validar" onclick="validarCodigoDisc2()" class="botao">
+    
+            <br><br>
+            <!--Letra f-->
+            <!-- MT-xx.xxx-IFTM -->
+            <label for="codigoDisc3">Código de uma disciplina do IFTM (versão 3):</label>
+            <input type="text" id="codigoDisc3" value="MT-11.222-IFTM">
+            <input type="button" value="Validar" onclick="validarCodigoDisc3()" class="botao">
+    
+            <br><br>
+            <!--Letra g-->
+            <!-- MT-xx.xxx-IFTM -->
+            <label for="codigoDisc4">Código de uma disciplina do IFTM (versão 4):</label>
+            <input type="text" id="codigoDisc4" value="MT-11.222-IFTM Uberlândia">
+            <input type="button" value="Validar" onclick="validarCodigoDisc4()" class="botao">
+    
+            <br><br>
+            <!--Letra h-->
+            <!-- IFTM campus Uberlândia ou IFTM campus Uberlândia Centro -->
+            <label for="campus">Nome de campus do IFTM:</label>
+            <input type="text" id="campus" value="IFTM campus Uberlândia Centro">
+            <input type="button" value="Validar" onclick="validarCampus()" class="botao">
+    
+            <br><br>
+            <!--Letra i-->
+            <!-- IFTM campus Uberlândia ou IFTM campus Uberlândia Centro -->
+            <label for="tel">Telefone:</label>
+            <input type="text" id="tel" value="+55(99)11111-2222" onkeypress="inserirMascara('tel','+999(99)99999-9999')">
+            <input type="button" value="validar" onclick="validarTel()" class="botao">
+    
+            <br><br>
+            <!--Letra j-->
+            <!-- (xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx -->
+            <label for="telefone">Telefone (versão 2):</label>
+            <input type="text" id="telefone" value="(034)99999-9999">
+            <input type="button" value="Validar" onclick="validarTel2()" class="botao">
+    
+            <br><br>
+            <!--Letra k-->
+            <!-- x,xz ou x.xz -->
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" value="1,5a">
+            <input type="button" value="Validar" onclick="validarAltura()" class="botao">
+    
+            <br><br>
+            <!--Letra l-->
+            <!-- R$0,00 até R$999.999.999.999,99 -->
+            <label for="faturamento">Faturamento anual de uma empresa:</label>
+            <input type="text" id="faturamento" value="R$999.999.999.999,99">
+            <input type="button" value="Validar" onclick="validarFaturamento()" class="botao">
+    
+            <br><br>
+            <!--Letra m-->
+            <!-- HH:MM:SS:CC -->
+            <label for="cronometro">Cronômetro:</label>
+            <input type="text" id="cronometro" value="20:50:59:99" onkeypress="inserirMascara('cronometro','99:99:99:99')">
+            <input type="button" value="Validar" onclick="validarCronometro()" class="botao">
+    
+            <br><br>
+            <!--Letra n-->
+            <!-- X&W.Y.Z-U,V.T ou X&W.Y-U,V.T -->
+            <label for="senha">Senha:</label>
+            <input type="text" id="senha" value="321a.&apMb.aei.Ab0-asf+_,/*.cq">
+            <input type="button" value="validar" onclick="validarSenha()" class="botao">
+        </form>
+    </div>
+</body>
+</html>
