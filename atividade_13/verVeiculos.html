@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver veículo</title>
+    <script rel="text/javascript" type="text/javascript" src="./js/javascript3.js"></script>
+    <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body onload="mostrarCarros()">
+    <h1><span id="nomeUsuario"></span>, veja as opções para o seu perfil: </h1>
+    <section class="container">
+        <div class="imagem_div">
+            <img id="imagem" src="">
+        </div>
+        <div class="caracteristicas">
+            <h3>Características do veículo</h3>
+            <ul>
+                <li>Fabricante: <span id="fabricante"></span></li>
+                <li>Nome: <span id="nomeCarro"></span></li>
+                <li>Potência do motor: <span id="potencia"></span></li>
+                <li>Garantia: <span id="garantia"></span></li>
+                <li>Consumo (cidade): <span id="consumo"></span></li>
+            </ul>
+            <input type="button" value="Mudar perfil" class="botao" onclick="mudarPerfil()">
+        </div>
+        
+    </section>
+</body>
+</html>
